@@ -8,7 +8,7 @@ import Skills from "./components/Skills";
 
 export default function App() {
   return (
-    <main className="text-gray-400 bg-gray-900 body-font">
+    <main className="snap-y snap-proximity w-screen h-screen overflow-scroll text-gray-400 bg-gray-900 body-font">
       <Navbar />
       <About />
       <Projects />

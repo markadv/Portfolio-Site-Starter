@@ -25,9 +25,9 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="relative">
-      <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap">
-        <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
+    <section id="contact" className="snap-center w-screen h-screen">
+      {/* <div className="container px-5 py-10 mx-auto flex sm:flex-nowrap flex-wrap"> */}
+        {/* <div className="lg:w-2/3 md:w-1/2 bg-gray-900 rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">
           <iframe
             width="100%"
             height="100%"
@@ -62,13 +62,13 @@ export default function Contact() {
               <p className="leading-relaxed">+63-977-801-0897</p>
             </div>
           </div>
-        </div>
+        </div> */}
         <form
           // netlify
           data-netlify="true"
           name="contact"
           onSubmit={handleSubmit}
-          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0">
+          className="lg:w-1/3 md:w-1/2 flex flex-col md:ml-auto mr-auto w-full md:py-8 mt-8 md:mt-0">
           <h2 className="text-white sm:text-4xl text-3xl mb-1 font-medium title-font">
             Hire Me
           </h2>
@@ -119,7 +119,7 @@ export default function Contact() {
             Submit
           </button>
         </form>
-      </div>
+      {/* </div> */}
     </section>
   );
 }

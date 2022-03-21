@@ -1,45 +1,50 @@
 import React from "react";
-
-import TypeWriterEffect from 'react-typewriter-effect';
+import Typewriter from 'typewriter-effect';
 
 export default function About() {
-
   return (
-    <section id="about">
+    <section id="about"className="snap-center w-screen h-screen">
       <div className="container mx-auto flex px-10 py-20 md:flex-row flex-col items-center">
         <div className="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
           <h1 className="title-font sm:text-4xl text-3xl mb-4 font-medium text-white">
-          <TypeWriterEffect
-            // textStyle={{ fontFamily: 'Red Hat Display' }}
-            startDelay={100}
-            cursorColor="white"
-            text="Hi, I'm Mark."
-            typeSpeed={75}
-            width="230"
-            trackWidth="13"
-            multiTextLoop
-            hideCursorAfterText={true}
+          <Typewriter
+            onInit={(typewriter) => {
+              typewriter  
+                .changeDelay(50)
+                .changeDeleteSpeed(50)
+                .typeString('Hi, I am <strong>Mark Timothy Advento</strong>.')
+                .pauseFor(1000)
+                .deleteChars(17)
+                .typeString('.<br>')
+                .pauseFor(500)
+                .typeString('a self-taught developer.')
+                .changeDeleteSpeed(25)
+                .deleteChars(24)
+                .typeString('a gamer.')
+                .changeDeleteSpeed(100)
+                .deleteChars(8)
+                .typeString('a weightlifting enthusiast.')
+                .changeDeleteSpeed(25)
+                .deleteChars(27)
+                .typeString('a dad.')
+                .changeDeleteSpeed(100)
+                .deleteChars(6)
+                .typeString('an engineer.')
+                .changeDeleteSpeed(75)
+                .deleteChars(12)
+                .typeString('a self-taught developer.')
+                .callFunction(function(state) {
+                  state.elements.cursor.style.display = 'none';
+                })
+                .start()
+            }}
           />
-            <br className="hidden lg:inline-block" />
-            <TypeWriterEffect
-              startDelay={3000}
-              cursorColor="white"
-              multiText={[
-                'a self-taught developer...',
-                'a licensed civil engineer...',
-                'a gamer...',
-                'a dad...',
-              ]}
-              multiTextDelay={2000}
-              multiTextLoop
-              typeSpeed={100}
-            />
           </h1>
-          <p className="mb-8 leading-relaxed">
+          {/* <p className="mb-8 leading-relaxed">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Qui
             laborum quasi, incidunt dolore iste nostrum cupiditate voluptas?
             Laborum, voluptas natus?
-          </p>
+          </p> */}
           <div className="flex justify-center">
             <a
               href="#contact"
